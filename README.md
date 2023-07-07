@@ -12,8 +12,11 @@ C 언어로 작성되었고, 이진 파일을 이용한다.</br>
 
 <h3>사용법</h3>
 <ul>
+먼저 Makefile을 실행한다.(make)</br>
 
-<span style="font-weight: bold;">교수전용</span>
+</br>
+
+1. 교수전용
 <li></li>
 <li></li>
 <li></li>
@@ -22,7 +25,7 @@ C 언어로 작성되었고, 이진 파일을 이용한다.</br>
 
 </br>
 
-<span style="font-weight: bold;">학생전용</span>
+2. 학생전용
 <li></li>
 <li></li>
 <li></li>
