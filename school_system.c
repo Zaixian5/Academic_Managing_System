@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
   if(argc != 2)
   {
     fprintf(stderr, "format: ./student (file_name)\n");
-	exit(1);
+	  exit(1);
   }
 
   if ((fp = fopen(argv[1], "rb+")) == NULL)
@@ -34,15 +34,15 @@ int main(int argc, char* argv[])
     switch(mode)
     {
       case 1:
-	    forFaculty();
-	    break;
+	      forFaculty();
+	      break;
     
       case 2:
-	    forStudent();
-	    break;
+	      forStudent();
+	      break;
 
       default:
-	    printf("Wrong Input. Try Again\n");
+	      printf("Wrong Input. Try Again\n");
     }
 
 	printf("\nChange Mode?(y/n): ");

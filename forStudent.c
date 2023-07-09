@@ -21,24 +21,24 @@ void forStudent(void)
     printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
 				rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
 
-	printf("\nYou can only change your phone number, email, address.\n");
-	printf("Do you want to change your informations?(y/n): ");
-	scanf(" %c", &isChange);
+	  printf("\nYou can only change your phone number, email, address.\n");
+	  printf("Do you want to change your informations?(y/n): ");
+	  scanf(" %c", &isChange);
 
-	if(isChange == 'y')
-	{
+	  if(isChange == 'y')
+	  {
       printf("\nEnter your new phone number: ");
-	  scanf("%s", rec.phone);
+	    scanf("%s", rec.phone);
       
-	  printf("\nEnter your new e-mail: ");
-	  scanf("%s", rec.email);
+	    printf("\nEnter your new e-mail: ");
+	    scanf("%s", rec.email);
 
-	  printf("\nEnter your new address: ");
-	  scanf("%s", rec.addr);
+	    printf("\nEnter your new address: ");
+	    scanf("%s", rec.addr);
 
-	  fseek(fp, -(long)sizeof(rec), SEEK_CUR);
-	  fwrite(&rec, sizeof(rec), 1, fp);
-	}
+	    fseek(fp, -(long)sizeof(rec), SEEK_CUR);
+	    fwrite(&rec, sizeof(rec), 1, fp);
+	  }
   }
   else
   {

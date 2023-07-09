@@ -19,23 +19,23 @@ void newStudent(void)
 
   while(true)
   {
-     printf("No.%d: ", info_num++);
+    printf("No.%d: ", info_num++);
 
-     if (scanf("%d %s %s %s %s %s %d %s %s", &rec.id, rec.name, rec.phone, rec.email,
-         rec.addr, rec.major, &rec.scholar, rec.multimajor, rec.state) != 9)
+    if (scanf("%d %s %s %s %s %s %d %s %s", &rec.id, rec.name, rec.phone, rec.email,
+        rec.addr, rec.major, &rec.scholar, rec.multimajor, rec.state) != 9)
      {
-         break;
+        break;
      }
 
     fseek(fp, (rec.id - STARTID)*(long)sizeof(rec), SEEK_SET);
-	fwrite(&rec, sizeof(rec), 1, fp);
+	  fwrite(&rec, sizeof(rec), 1, fp);
 
-	printf("\ncontinue registering?(y/n): ");
-	scanf(" %c", &con);
+	  printf("\ncontinue registering?(y/n): ");
+	  scanf(" %c", &con);
 
-	if(con == 'n')
-	{
+	  if(con == 'n')
+	  {
       break;
-	}
+	  }
   }
 }

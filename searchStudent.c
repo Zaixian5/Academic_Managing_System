@@ -41,105 +41,105 @@ void searchStudent(void)
       {
         printf("Not Exist\n");
       }
-	  break;
+	  	break;
 
-	case 'n':
-	  printf("\n-----Enter Name to search-----\n");
+		case 'n':
+	  	printf("\n-----Enter Name to search-----\n");
       printf("Enter here: ");
-	  scanf("%s", search_name);
+	  	scanf("%s", search_name);
 	  
-	  rewind(fp);
-	  while(fread(&rec, sizeof(rec), 1, fp) > 0)
-	  {
-		if(rec.id == 0)
-		{
-          continue;
-		}
+	  	rewind(fp);
+	  	while(fread(&rec, sizeof(rec), 1, fp) > 0)
+	  	{
+				if(rec.id == 0)
+				{
+        	continue;
+				}
 
-        if(strncmp(rec.name, search_name, strlen(rec.name)) == 0)
-		{
-		  printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
-				  rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
+      	if(strncmp(rec.name, search_name, strlen(rec.name)) == 0)
+				{
+		  		printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
+				  	rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
 
-		  name_exist = true;
-		}
-		else
-		{
-		  continue;
-		}
-	  }
+		  		name_exist = true;
+				}
+				else
+				{
+		  		continue;
+				}
+	  	}
 
-	  if (!name_exist)
-	  {
-		  printf("Not Exist\n");
-	  }
+	  	if (!name_exist)
+	  	{
+		  	printf("Not Exist\n");
+	  	}
 
-	  break;
+	  	break;
 
-	case 'p':
-	  printf("\n-----Enter Phone number to search-----\n");
+		case 'p':
+	  	printf("\n-----Enter Phone number to search-----\n");
       printf("Enter here: ");
-	  scanf("%s", search_phone);
+	  	scanf("%s", search_phone);
 	  
-	  rewind(fp);
-	  while(fread(&rec, sizeof(rec), 1, fp) > 0)
-	  {
-		if(rec.id == 0)
-		{
+	  	rewind(fp);
+	  	while(fread(&rec, sizeof(rec), 1, fp) > 0)
+	  	{
+				if(rec.id == 0)
+				{
           continue;
-		}
+				}
 
-        if(strncmp(rec.phone, search_phone, strlen(rec.phone)) == 0)
-		{
-		  printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
-				  rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
+				if(strncmp(rec.phone, search_phone, strlen(rec.phone)) == 0)
+				{
+		  		printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
+				  	rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
 
-		  phone_exist = true;
-		}
-		else
-		{
-  		  continue;
-		}
-	  }
+		  		phone_exist = true;
+				}
+				else
+				{
+  		  	continue;
+				}
+	  	}
 
-	  if (!phone_exist)
-	  {
-		  printf("Not Exist\n");
-	  }
+	  	if (!phone_exist)
+	  	{
+		  	printf("Not Exist\n");
+	  	}
 
-	  break;
+	  	break;
 
-	case 'e':
-	  printf("\n-----Enter e-mail to search-----\n");
+		case 'e':
+	  	printf("\n-----Enter e-mail to search-----\n");
       printf("Enter here: ");
-	  scanf("%s", search_email);
+	  	scanf("%s", search_email);
 	  
-	  rewind(fp);
-	  while(fread(&rec, sizeof(rec), 1, fp) > 0)
-	  {
-		if(rec.id == 0)
-		{
+	  	rewind(fp);
+	  	while(fread(&rec, sizeof(rec), 1, fp) > 0)
+	  	{
+				if(rec.id == 0)
+				{
           continue;
-		}
+				}
 
         if(strncmp(rec.email, search_email, strlen(rec.email)) == 0)
-		{
-		  printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
-				  rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
+				{
+		  		printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
+				  	rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
 
-		  email_exist = true;
-		}
-		else
-		{
-  		  continue;
-		}
-	  }
+		  		email_exist = true;
+				}
+				else
+				{
+  		  	continue;
+				}
+	  	}
 
-	  if (!email_exist)
-	  {
-		  printf("Not Exist\n");
-	  }
+	  	if (!email_exist)
+	  	{
+		  	printf("Not Exist\n");
+	  	}
 
-	  break;
+	  	break;
   }
 }

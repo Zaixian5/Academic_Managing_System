@@ -28,26 +28,26 @@ void forFaculty(void)
     {
       case 1:
   	    newStudent();
-	    break;
+	      break;
 
       case 2:
-	    changeStudent();
-	    break;
+	      changeStudent();
+	      break;
 
       case 3:
-	    showStudent();
-	    break;
+	      showStudent();
+	      break;
 
       case 4:
-	    searchStudent();
-	    break;
+	      searchStudent();
+	      break;
 
       default:
-	    printf("Wrong Input. Try Again\n");
+	      printf("Wrong Input. Try Again\n");
     }
 
-	printf("\ncontinue faculty mode?(y/n): ");
-	scanf(" %c", &con);
+	  printf("\ncontinue faculty mode?(y/n): ");
+	  scanf(" %c", &con);
 
   }while(con == 'y');
 }
