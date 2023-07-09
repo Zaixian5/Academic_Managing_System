@@ -19,8 +19,8 @@ int main(int argc, char* argv[])
 
   if ((fp = fopen(argv[1], "rb+")) == NULL)
   {
-      fprintf(stderr, "file open failed\n");
-      exit(2);
+    fprintf(stderr, "file open failed\n");
+    exit(2);
   }
 
   printf("-----School Affairs Managing Program-----\n\n");

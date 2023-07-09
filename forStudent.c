@@ -19,7 +19,7 @@ void forStudent(void)
   if((fread(&rec, sizeof(rec), 1, fp) > 0) && (rec.id != 0))
   {
     printf("%d %s %s %s %s %s %d %s %s\n", rec.id, rec.name, rec.phone, rec.email,
-				rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
+			rec.addr, rec.major, rec.scholar, rec.multimajor, rec.state);
 
 	  printf("\nYou can only change your phone number, email, address.\n");
 	  printf("Do you want to change your informations?(y/n): ");
